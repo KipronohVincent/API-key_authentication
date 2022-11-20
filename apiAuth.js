@@ -23,6 +23,7 @@ const createUser = (_username, req) => {
 };
 
 const authenticateKey = (req, res, next) => {
+  let MAX;
   const api_key = req.header('x-api-key'); // Add API key to headers
   const account = users.find((user) => user.api_key == api_key);
   // find() returns an object or undefined
