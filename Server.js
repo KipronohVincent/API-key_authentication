@@ -46,5 +46,5 @@ app.post('/api/register', (req, res) => {
       console.error('Failure to launch server');
       return;
     }
-    console.log(`Server has started on port ${port}`);
+    console.log(`Server has started`);
   });
