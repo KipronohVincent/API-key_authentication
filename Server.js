@@ -28,7 +28,7 @@ app.post('/api/register', (req, res) => {
       data: Countries,
     });
   });
-  
+
   app.post('/api/country', API.authenticateKey, (req, res) => {
     //add a new country
     let country = {
@@ -46,5 +46,5 @@ app.post('/api/register', (req, res) => {
       console.error('Failure to launch server');
       return;
     }
-    console.log(`Listening on port ${port}`);
+    console.log(`Server has started on port ${port}`);
   });
