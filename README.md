@@ -12,3 +12,6 @@
 - The authentication system takes in a given username and creates user data, containing the `username`, `API key`, and a count of `usage` on a particular day. I’ll need the count so that I can set a limit on how many times a user can use the API on a particular day.
 
 - I’ll start by creating a function called `genAPIKey()` that generates the API when a new user is created. The function will generate a `base-36` string that contains `30` characters within `A-Z` and `0-9`, which will represent the API key.
+
+## Develop routes for the server
+- In this section, I’ll create the routes that I’ll use to access the data in the API while applying the API key checks. I’ll create endpoints to register a user, add countries to the country list, and also get the list of countries. Requests to add or get countries will require API key authentication.
