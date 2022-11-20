@@ -1,0 +1,25 @@
+{
+  "name": "api-key_authentication",
+  "version": "1.0.0",
+  "description": "- When building an API with Node.js, there are different options available regarding authentication. Some of these include the `JSON Web Token`, `OAuth`, the `API key`, and more.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "devStart": "nodemon Server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/KipronohVincent/API-key_authentication.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/KipronohVincent/API-key_authentication/issues"
+  },
+  "homepage": "https://github.com/KipronohVincent/API-key_authentication#readme",
+  "dependencies": {
+    "express": "^4.18.2",
+    "nodemon": "^2.0.20"
+  }
+}
