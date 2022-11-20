@@ -12,3 +12,10 @@ app.get('/', (req, res) => {
   //home page
   res.status(200).send({ data: { message: 'You can get list of countires at /api/country.' } });
 });
+
+app.post('/api/register', (req, res) => {
+    //create a new with "user:Username"
+    let username = req.body.username;
+    let user = API.createUser(username, req);
+    res.status(201).send({ data: user });
+  });
