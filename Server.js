@@ -19,3 +19,32 @@ app.post('/api/register', (req, res) => {
     let user = API.createUser(username, req);
     res.status(201).send({ data: user });
   });
+
+  app.get('/api/country', API.authenticateKey, (req, res) => {
+    //get list of all Countries   
+    let today = new Date().toISOString().split('T')[0];
+    console.log(today);
+    res.status(200).send({
+      data: Countries,
+    });
+  });
+  
+  app.post('/api/country', API.authenticateKey, (req, res) => {
+    //add a new country
+    let country = {
+      _id: Date.now(),
+      name: req.body.country,
+    };
+    Countries.push(country);
+    res.status(201).send({
+      data: country,
+    });
+  });
+  
+  app.listen(port, function (err) {
+    if (err) {
+      console.error('Failure to launch server');
+      return;
+    }
+    console.log(`Listening on port ${port}`);
+  });
